@@ -1,0 +1,23 @@
+# Jekyll build/cache
+.jekyll-cache/
+.sass-cache/
+
+# Ruby / Bundler
+.bundle/
+vendor/
+
+# Node
+node_modules/
+
+# OS / editors
+*.ps1
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Environment
+.env
+
+# Ignore generated site files
+_site/

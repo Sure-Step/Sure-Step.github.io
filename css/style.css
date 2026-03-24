@@ -1,0 +1,37 @@
+/* Basic styling for the site outline */
+:root{--bg:#f7f7fb;--accent:#2b6cb0;--text:#222}
+*{box-sizing:border-box}
+body{font-family:Segoe UI,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);margin:0}
+.site-nav{background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0.5rem 1rem;border-bottom:1px solid #e6e6ef}
+.site-nav .logo{font-weight:700;color:var(--accent);text-decoration:none}
+.site-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:0.5rem;align-items:center}
+.site-nav li{display:flex;align-items:center}
+.site-nav a{color:var(--text);text-decoration:none;padding:0.5rem;display:inline-flex;align-items:center}
+.site-nav a:hover{color:var(--accent)}
+.container{max-width:900px;margin:2rem auto;padding:0 1rem}
+footer{padding:1rem;text-align:center;color:#666}
+
+/* Dropdown menu styles */
+.site-nav .dropdown{position:relative}
+.site-nav .drop-wrap{display:flex;align-items:center;gap:0.25rem}
+.site-nav .drop-parent{padding:0.5rem}
+.site-nav .drop-btn{background:transparent;border:0;padding:0.25rem 0.5rem;cursor:pointer;font-size:0.9rem;color:var(--text)}
+.site-nav .drop-btn:focus{outline:2px solid #cfe6ff;border-radius:4px}
+.site-nav .dropdown-menu{display:none;position:absolute;top:100%;left:0;min-width:180px;background:#fff;border:1px solid #e6e6ef;box-shadow:0 6px 18px rgba(16,24,40,0.08);padding:0;margin:0;list-style:none;flex-direction:column;z-index:30}
+.site-nav .dropdown-menu li a{display:block;padding:0.5rem 1rem;white-space:nowrap}
+.site-nav .dropdown-menu li a:hover{background:#f4f7fb;color:var(--accent)}
+/* show on hover, focus-within, or when `.open` is added by JS */
+.site-nav .dropdown:hover .dropdown-menu,
+.site-nav .dropdown:focus-within .dropdown-menu,
+.site-nav .dropdown.open .dropdown-menu{display:flex}
+
+/* small screens: stack nav items */
+@media (max-width:640px){
+	.site-nav{flex-direction:column;align-items:stretch}
+	.site-nav ul{flex-direction:column}
+	.site-nav .dropdown-menu{position:relative;top:0;left:0;border:0;box-shadow:none}
+	.site-nav .drop-wrap{justify-content:space-between;padding-right:0.5rem}
+	.site-nav .drop-parent{padding:0.5rem}
+	.site-nav .drop-btn{background:transparent;border:0;padding:0.25rem 0.5rem;cursor:pointer;font-size:0.9rem;color:var(--text)}
+	.site-nav .drop-btn:focus{outline:2px solid #cfe6ff;border-radius:4px}
+}

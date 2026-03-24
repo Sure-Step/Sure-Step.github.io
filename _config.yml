@@ -1,0 +1,15 @@
+title: Sure-Step Development Documentation
+baseurl: ""
+url: ""
+markdown: kramdown
+theme: minima
+plugins: []
+
+# Build settings
+exclude:
+  - node_modules
+  - vendor
+
+# kramdown options
+kramdown:
+  input: GFM
