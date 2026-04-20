@@ -37,3 +37,9 @@ footer{padding:1rem;text-align:center;color:#666}
 	.site-nav .drop-btn{background:transparent;border:0;padding:0.25rem 0.5rem;cursor:pointer;font-size:0.9rem;color:var(--text)}
 	.site-nav .drop-btn:focus{outline:2px solid #cfe6ff;border-radius:4px}
 }
+
+/* reference hanging indentation */
+.reference {
+  padding-left: 22px ;
+  text-indent: -22px ;
+} 
