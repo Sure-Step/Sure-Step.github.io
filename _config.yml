@@ -2,7 +2,7 @@ title: Sure-Step Development Documentation
 baseurl: ""
 url: ""
 markdown: kramdown
-theme: minima
+# theme: minima
 plugins: []
 
 # Build settings
