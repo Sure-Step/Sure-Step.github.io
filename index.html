@@ -3,30 +3,26 @@ layout: default
 title: Home
 ---
 
-<main class="container" id="home">
+<main class="container" id="main">
 
-  <section class="page-intro">
-    <span class="eyebrow">Caregiver Platform</span>
-    <h1>Support that keeps caregivers one step ahead</h1>
-    <p class="lead">
-      Sure-Step is a mobile and desktop application that helps informal and professional
-      caregivers plan, organize, and coordinate the daily work of caring for someone else.
-    </p>
-  </section>
-
-  <section>
-    <h2 id="Problem">The Problem</h2>
+  <section class="reveal">
+    <h2 id="Problem">
+      {% include icon.html name="alert-triangle" %}
+      <span>The Problem</span>
+    </h2>
     <div class="content-card">
       <p>
         As medical technology saves more lives — both young and old — people living with
         chronic conditions need more ongoing care than ever before. More Americans are stepping into the role of informal caregiver, while professional caregivers are managing heavier patient loads. Both groups often operate with limited external support and a shortage of purpose-built tools.
-    </p>
       </p>
     </div>
   </section>
 
-  <section>
-    <h2 id="Characteristics">Who This Affects</h2>
+  <section class="reveal tint">
+    <h2 id="Characteristics">
+      {% include icon.html name="users" %}
+      <span>Who This Affects</span>
+    </h2>
     <p>
       Caregiver burden is widespread, and the data makes clear how much opportunity there
       is to reduce stress through better tools, clearer information, and proactive planning.
@@ -34,7 +30,7 @@ title: Home
 
     <div class="stat-grid">
       <div class="stat-card">
-        <span class="stat-value">~50%</span>
+        <span class="stat-value">~<span class="counter" data-target="50">0</span>%</span>
         <span class="stat-label">
           of informal caregivers experience caregiver burden, driven by insufficient
           resources and responsibility conflict.
@@ -42,14 +38,14 @@ title: Home
         </span>
       </div>
       <div class="stat-card">
-        <span class="stat-value">1 in 5</span>
+        <span class="stat-value"><span class="counter" data-target="1">0</span> in 5</span>
         <span class="stat-label">
           Americans provided care to an adult or child with special needs in the past year.
           <br><small>(AARP, 2020)</small>
         </span>
       </div>
       <div class="stat-card">
-        <span class="stat-value">#1</span>
+        <span class="stat-value">#<span class="counter" data-target="1">0</span></span>
         <span class="stat-label">
           stress reducer for family caregivers of people with chronic or rare conditions
           is proactive planning.
@@ -57,7 +53,7 @@ title: Home
         </span>
       </div>
       <div class="stat-card">
-        <span class="stat-value">50%+</span>
+        <span class="stat-value"><span class="counter" data-target="50">0</span>%+</span>
         <span class="stat-label">
           of caregivers say they need more information and help with topics like
           managing stress and keeping their patient safe.
@@ -67,8 +63,11 @@ title: Home
     </div>
   </section>
 
-  <section>
-    <h2 id="Solution">Our Solution</h2>
+  <section class="reveal">
+    <h2 id="Solution">
+      {% include icon.html name="clipboard-check" %}
+      <span>Our Solution</span>
+    </h2>
 
     <div class="content-card">
       <p>
