@@ -1,36 +1,59 @@
-<nav class="site-nav">
-    <ul>
-        <li><a href="{{ '/' | relative_url }}"><img src="{{ '/assets/surestep-logo.png' | relative_url }}" alt="SureStep home" class="nav-logo">Homepage</a></li>
+{%- assign current = page.url | remove_first: site.baseurl -%}
 
-        <li class="dropdown">
-            <div class="drop-wrap">
-                <a href="{{ '/presentations.html' | relative_url }}" class="drop-parent">Presentations</a>
-                <button class="drop-btn" aria-expanded="false" aria-label="Open Presentations menu">▾</button>
-            </div>
-            <ul class="dropdown-menu">
-                <li><a href="{{ '/presentations.html' | relative_url }}#Feasibility">Feasibility</a></li>
-                <li><a href="{{ '/presentations.html' | relative_url }}#Design">Design</a></li>
-                <li><a href="{{ '/presentations.html' | relative_url }}#Demo">Demo</a></li>
-            </ul>
-        </li>
+<nav class="site-nav" aria-label="Primary">
+  <ul>
+    <li>
+      <a href="{{ '/' | relative_url }}"
+         {% if current == '/' or current == '/index.html' %}aria-current="page"{% endif %}>
+        <img src="{{ '/assets/surestep-logo.png' | relative_url }}" alt="" class="nav-logo">
+        <span class="logo">Sure-Step</span>
+      </a>
+    </li>
 
-        <li><a href="{{ '/srs.html' | relative_url }}">SRS</a></li>
+    <li class="dropdown">
+      <div class="drop-wrap">
+        <a href="{{ '/presentations.html' | relative_url }}" class="drop-parent"
+           {% if current contains 'presentations' %}aria-current="page"{% endif %}>Presentations</a>
+        <button class="drop-btn" aria-expanded="false" aria-label="Open Presentations menu">&#9662;</button>
+      </div>
+      <ul class="dropdown-menu">
+        <li><a href="{{ '/presentations.html' | relative_url }}#Feasibility">Feasibility</a></li>
+        <li><a href="{{ '/presentations.html' | relative_url }}#Design">Design</a></li>
+        <li><a href="{{ '/presentations.html' | relative_url }}#Demo">Demo</a></li>
+      </ul>
+    </li>
 
-        <li class="dropdown">
-            <div class="drop-wrap">
-                <a href="{{ '/deliverables.html' | relative_url }}" class="drop-parent">Deliverables</a>
-                <button class="drop-btn" aria-expanded="false" aria-label="Open Deliverables menu">▾</button>
-            </div>
-            <ul class="dropdown-menu">
-                <li><a href="{{ '/deliverables.html' | relative_url }}#Process-Flow">Process Flow</a></li>
-                <li><a href="{{ '/deliverables.html' | relative_url }}#Competition">Competition</a></li>
-                <li><a href="{{ '/deliverables.html' | relative_url }}#Risks">Risks</a></li>
-                <li><a href="{{ '/deliverables.html' | relative_url }}#Diagrams">Diagrams</a></li>
-            </ul>
-        </li>
+    <li>
+      <a href="{{ '/srs.html' | relative_url }}"
+         {% if current contains 'srs' %}aria-current="page"{% endif %}>SRS</a>
+    </li>
 
-        <li><a href="{{ '/team.html' | relative_url }}">Team</a></li>
-        <li><a href="{{ '/references-glossary.html' | relative_url }}#References">References</a></li>
-        <li><a href="{{ '/references-glossary.html' | relative_url }}#Glossary">Glossary</a></li>
-    </ul>
+    <li class="dropdown">
+      <div class="drop-wrap">
+        <a href="{{ '/deliverables.html' | relative_url }}" class="drop-parent"
+           {% if current contains 'deliverables' %}aria-current="page"{% endif %}>Deliverables</a>
+        <button class="drop-btn" aria-expanded="false" aria-label="Open Deliverables menu">&#9662;</button>
+      </div>
+      <ul class="dropdown-menu">
+        <li><a href="{{ '/deliverables.html' | relative_url }}#Process-Flow">Process Flow</a></li>
+        <li><a href="{{ '/deliverables.html' | relative_url }}#Competition">Competition</a></li>
+        <li><a href="{{ '/deliverables.html' | relative_url }}#Risks">Risks</a></li>
+        <li><a href="{{ '/deliverables.html' | relative_url }}#Diagrams">Diagrams</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="{{ '/team.html' | relative_url }}"
+         {% if current contains 'team' %}aria-current="page"{% endif %}>Team</a>
+    </li>
+
+    <li>
+      <a href="{{ '/references-glossary.html' | relative_url }}#References"
+         {% if current contains 'references' %}aria-current="page"{% endif %}>References</a>
+    </li>
+
+    <li>
+      <a href="{{ '/references-glossary.html' | relative_url }}#Glossary">Glossary</a>
+    </li>
+  </ul>
 </nav>

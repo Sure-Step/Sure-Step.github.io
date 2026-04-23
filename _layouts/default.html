@@ -3,20 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="Sure-Step — a platform that helps informal and professional caregivers plan, organize, and coordinate care with confidence." />
+  <meta name="theme-color" content="#0F766E" />
+
+  <title>{{ page.title | default: site.title }} · {{ site.title | default: 'Sure-Step' }}</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
-  </head>
+</head>
 <body>
-  <header>
-    <img src="{{ '/assets/banner.png' | relative_url }}" width="100%">
-        <!-- <img src="{{ '/assets/home-caregiver.jpg' | relative_url }}" width="100%"> -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="hero">
+      <img src="{{ '/assets/banner.png' | relative_url }}" alt="Sure-Step — support for caregivers">
+    </div>
     {% include nav.html %}
   </header>
 
-  {{ content }}
+  <div id="main">
+    {{ content }}
+  </div>
 
   <footer>
-    <p>{{ site.title | default: 'Sure-Step Website' }}</p>
+    <p>
+      <span class="brand">{{ site.title | default: 'Sure-Step' }}</span>
+      &copy; {{ 'now' | date: "%Y" }} &middot; Designed with care for caregivers
+    </p>
   </footer>
 </body>
 </html>
