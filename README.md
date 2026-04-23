@@ -16,29 +16,29 @@ Research shows that nearly half of informal caregivers experience caregiver burd
 
 ## Website Contents
 
-| Page | Description |
-| --- | --- |
-| [Home](https://sure-step.github.io/) | Problem framing, research-backed statistics, and an overview of the Sure-Step solution. |
-| [Presentations](https://sure-step.github.io/presentations.html) | Feasibility, Design, and Demo decks. |
-| [SRS](https://sure-step.github.io/srs.html) | The full Software Requirements Specification document. |
-| [Deliverables](https://sure-step.github.io/deliverables.html) | Process flow, competition analysis, risk analysis, GUI design, and architecture diagrams. |
-| [Team](https://sure-step.github.io/team.html) | The people building Sure-Step. |
-| [References & Glossary](https://sure-step.github.io/references-glossary.html) | Research citations and definitions of key terms. |
+| Page                                                                          | Description                                                                               |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| [Home](https://sure-step.github.io/)                                          | Problem framing, research-backed statistics, and an overview of the Sure-Step solution.   |
+| [Presentations](https://sure-step.github.io/presentations.html)               | Feasibility, Design, and Demo decks.                                                      |
+| [SRS](https://sure-step.github.io/srs.html)                                   | The full Software Requirements Specification document.                                    |
+| [Deliverables](https://sure-step.github.io/deliverables.html)                 | Process flow, competition analysis, risk analysis, GUI design, and architecture diagrams. |
+| [Team](https://sure-step.github.io/team.html)                                 | The people building Sure-Step.                                                            |
+| [References & Glossary](https://sure-step.github.io/references-glossary.html) | Research citations and definitions of key terms.                                          |
 
 ## Team
 
-- Vallerie Hamby
-- Hector Reyes
-- Michael Branch
-- Kai Buckhalter
-- Desean Parker
+* Vallerie Hamby
+* Hector Reyes
+* Michael Branch
+* Kai Buckhalter
+* Desean Parker
 
 ## Tech Stack
 
-- **Jekyll** — static site generator used to build the site from layouts and includes.
-- **GitHub Pages** — hosting.
-- **HTML, CSS, and vanilla JavaScript** — no framework dependencies.
-- **Inter** (Google Fonts) — typography.
+* **Jekyll** — static site generator used to build the site from layouts and includes.
+* **GitHub Pages** — hosting.
+* **HTML, CSS, and vanilla JavaScript** — no framework dependencies.
+* **Inter** (Google Fonts) — typography.
 
 ## Repository Structure
 
@@ -65,15 +65,27 @@ sure-step.github.io/
 
 ## Running Locally
 
-The site is a standard Jekyll project. To preview it on your machine:
+This site uses Jekyll, which requires Ruby.
+
+### Prerequisites
+
+* Install Ruby (recommended: RubyInstaller for Windows)
+* Install Bundler:
+
+  ```bash
+  gem install bundler
+  ```
+
+### Setup and Run
 
 ```bash
-# Install Ruby + Bundler if you don't have them, then:
 bundle install
 bundle exec jekyll serve
 ```
 
-The site will be available at `http://localhost:4000`.
+The site will be available at http://localhost:4000.
+
+> If you only want to view the site, you can skip this setup and use the live version on GitHub Pages.
 
 ## Design System
 
